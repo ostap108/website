@@ -1,0 +1,49 @@
+---
+layout: base.njk
+title: Контакт
+description: Як звернутися до Остапа Степанюка щодо терапії.
+---
+
+# Звернутися
+
+<!-- ЗАМІНИ на теплий короткий вступ: як ти зазвичай відповідаєш, за скільки. -->
+<p class="lede">
+  Якщо ви думаєте про терапію — напишіть кілька слів про себе, і я відповім.
+</p>
+
+<!-- ПЛЕЙСХОЛДЕР: поле action="" поки порожнє. Коли ми оберемо сервіс форм,
+     сюди підставиться адреса, куди надсилатимуться відповіді. Без неї
+     кнопка нічого не надішле — це навмисно, доки не вирішимо про приватність. -->
+<form action="" method="POST">
+  <div class="form-field">
+    <label for="name">Імʼя</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div class="form-field">
+    <label for="contact">Email або телефон</label>
+    <input type="text" id="contact" name="contact" required>
+  </div>
+  <div class="form-field">
+    <label for="when">Зручний час для звʼязку</label>
+    <input type="text" id="when" name="when">
+  </div>
+  <div class="form-field">
+    <label for="about">Що вас привело (коротко)</label>
+    <textarea id="about" name="about" rows="3"></textarea>
+  </div>
+
+  <div class="form-field consent">
+    <input type="checkbox" id="consent" name="consent" required>
+    <label for="consent">
+      Я погоджуюсь, щоб надана інформація використовувалась для звʼязку зі мною.
+      <!-- ЗАМІНИ на посилання на реальну сторінку політики приватності. -->
+    </label>
+  </div>
+
+  <button class="cta" type="submit">Надіслати</button>
+</form>
+
+<p style="margin-top:1.5rem; font-size:0.9rem; color:var(--ink-soft); max-width:40rem;">
+  Ваші дані використовуються лише для того, щоб відповісти на звернення, і не
+  передаються третім особам. <!-- ЗАМІНИ на короткий реальний текст політики. -->
+</p>

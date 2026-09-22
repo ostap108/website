@@ -1,3 +1,8 @@
+# Finished site, rebuilt automatically on every push — never committed.
+_site/
+
+# Downloaded tool files (only appear if you later set up local preview).
+node_modules/
+
+# Mac Finder clutter.
 .DS_Store
-.vscode/
-.idea/

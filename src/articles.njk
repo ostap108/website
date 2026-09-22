@@ -1,0 +1,19 @@
+---
+layout: base.njk
+title: Статті
+description: Тексти про емоції, стосунки та навички DBT простою мовою.
+---
+
+# Статті
+
+<!-- Цей список будується сам. Щоб додати статтю — просто створи новий файл
+     у теці src/articles/. Нічого тут редагувати не треба. -->
+
+<ul class="article-list">
+{% for post in collections.article | reverse %}
+  <li>
+    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    <time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>
+  </li>
+{% endfor %}
+</ul>

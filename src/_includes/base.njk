@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }} — {{ site.name }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,400&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/styles.css' | url }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Остап Степанюк",
+  "alternateName": "Ostap Stepaniuk",
+  "jobTitle": "Клінічний психолог",
+  "url": "{{ site.url }}",
+  "knowsAbout": ["Діалектична поведінкова терапія", "DBT", "Психотерапія", "Емоційна регуляція"],
+  "knowsLanguage": ["uk"]
+}
+</script>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="wordmark" href="{{ '/' | url }}">
+    {{ site.name }}
+    <span class="wordmark-sub">{{ site.role }}</span>
+  </a>
+  <nav class="site-nav">
+    <a href="{{ '/' | url }}">Головна</a>
+    <a href="{{ '/about/' | url }}">Про мене</a>
+    <a href="{{ '/how-i-work/' | url }}">Як я працюю</a>
+    <a href="{{ '/articles/' | url }}">Статті</a>
+    <a href="{{ '/contact/' | url }}">Контакт</a>
+  </nav>
+</header>
+
+<main>
+{{ content | safe }}
+</main>
+
+<footer class="site-footer">
+  <p>{{ site.name }} · {{ site.role }}</p>
+</footer>
+
+</body>
+</html>

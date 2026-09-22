@@ -1,0 +1,11 @@
+---
+layout: base.njk
+---
+<article>
+  <h1>{{ title }}</h1>
+  <time datetime="{{ page.date | isoDate }}">{{ page.date | readableDate }}</time>
+
+  {{ content | safe }}
+
+  <p style="margin-top:2.5rem;"><a href="{{ '/articles/' | url }}">← Усі статті</a></p>
+</article>
